@@ -1,7 +1,16 @@
 package com.bkdesenv.controlecliente.dto;
 
-import com.bkdesenv.controlecliente.model.Cliente;
+import lombok.Data;
 
-public class ClienteDTO extends Cliente {
+import java.time.LocalDateTime;
+
+@Data
+public class ClienteDTO {
+
+    private String cpf;
+    private String nome;
+    private String sobreNome;
+    private LocalDateTime dataNascimento;
+    private LocalDateTime dataCadastro;
 
 }
