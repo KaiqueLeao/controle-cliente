@@ -22,7 +22,8 @@ public class ClienteController {
     @PostMapping("/salvar")
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente cadastrarCliente(@RequestBody ClienteDTO clienteDto){
-        return clienteService.salvar(clienteMapper.clienteDtoToCliente(clienteDto));
+        Cliente cliente = clienteMapper.clienteDtoToCliente(clienteDto);
+        return clienteService.salvar(cliente);
     }
 
 }
